@@ -20,6 +20,9 @@ export const Content = styled.div`
     width: 22px;
     height: 22px;
     border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
     background: #00d3de60;
     border: 2px solid #00d3de;

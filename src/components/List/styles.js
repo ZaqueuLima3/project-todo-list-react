@@ -25,3 +25,7 @@ export const Container = styled.div`
     }
   }
 `;
+
+export const TaskList = styled.ul`
+  opacity: ${props => (props.done ? 0.6 : 1)};
+`;

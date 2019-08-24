@@ -19,6 +19,9 @@ export default function lists(state = INITIAL_STATE, action) {
       case '@lists/ADD_TASK_SUCCESS':
         draft.lists.unshift(action.payload.task);
         break;
+      case '@lists/REMOVE_TASK_SUCCESS':
+        draft.lists.splice(action.payload.index, 1);
+        break;
       default:
         return state;
     }

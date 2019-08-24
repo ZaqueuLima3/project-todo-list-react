@@ -47,5 +47,19 @@ export const Label = styled.div`
   width: 10px;
   height: 10px;
   border-radius: 50%;
+
   background: ${props => props.color};
+`;
+
+export const Close = styled.button`
+  width: 14px;
+  height: 14px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 10px;
+
+  background: #fa454120;
+  border-radius: 50%;
+  border: 1px solid #fa4541;
 `;

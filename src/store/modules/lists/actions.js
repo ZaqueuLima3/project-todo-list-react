@@ -12,6 +12,13 @@ export function undoneTaskSuccess(index) {
   };
 }
 
+export function removeTaskSuccess(index) {
+  return {
+    type: '@lists/REMOVE_TASK_SUCCESS',
+    payload: { index },
+  };
+}
+
 export function addTaskRequest(data) {
   return {
     type: '@lists/ADD_TASK_REQUEST',

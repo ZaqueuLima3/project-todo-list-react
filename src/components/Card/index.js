@@ -3,12 +3,14 @@ import { useDispatch } from 'react-redux';
 import PropTypes from 'prop-types';
 
 import { MdDone, MdClose } from 'react-icons/md';
+
 import {
   doneTaskSuccess,
   undoneTaskSuccess,
+  removeTaskSuccess,
 } from '~/store/modules/lists/actions';
 
-import { Container, Content, Label } from './styles';
+import { Container, Content, Label, Close } from './styles';
 
 export default function Card({ data, index }) {
   const dispatch = useDispatch();
@@ -19,6 +21,10 @@ export default function Card({ data, index }) {
 
   function handleUndone() {
     dispatch(undoneTaskSuccess(index));
+  }
+
+  function hanldeRemove() {
+    dispatch(removeTaskSuccess(index));
   }
 
   return (
@@ -36,6 +42,10 @@ export default function Card({ data, index }) {
         <p>{data.content}</p>
       </Content>
       <Label color={data.label} />
+
+      <Close onClick={hanldeRemove}>
+        <MdClose size={10} color="#fa4541" />
+      </Close>
     </Container>
   );
 }

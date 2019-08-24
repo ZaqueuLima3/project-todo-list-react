@@ -1,31 +1,30 @@
-import React from 'react';
-import { useDispatch } from 'react-redux';
+import React, { useState } from 'react';
+import PropTypes from 'prop-types';
 
 import { MdAdd } from 'react-icons/md';
 
 import Card from '~/components/Card';
-import { addTaskRequest } from '~/store/modules/lists/actions';
+import Modal from '~/components/ModalCreateTask';
 
 import { Container, HeaderList, TaskList } from './styles';
 
 export default function List({ data }) {
-  const dispatch = useDispatch();
+  const [modalIsOpen, setModalIsOpen] = useState(false);
 
-  function hanldeNew() {
-    const data = {
-      content: 'Estudar módulo 01 de NodeJS',
-      label: '#7159c1',
-      user: 'https://api.adorable.io/avatars/285/abott@adorable.png',
-      completed: false,
-    };
-
-    dispatch(addTaskRequest(data));
+  function openModal() {
+    setModalIsOpen(true);
   }
+
+  function closeModal() {
+    setModalIsOpen(false);
+  }
+
   return (
     <Container>
+      <Modal modalIsOpen={modalIsOpen} closeModal={closeModal} />
       <HeaderList>
         <h2>Tarefas</h2>
-        <button type="button" onClick={hanldeNew}>
+        <button type="button" onClick={openModal}>
           <MdAdd size={24} color="#fff" />
         </button>
       </HeaderList>
@@ -51,3 +50,11 @@ export default function List({ data }) {
     </Container>
   );
 }
+
+List.propTypes = {
+  data: PropTypes.array,
+};
+
+List.defaultProps = {
+  data: [],
+};

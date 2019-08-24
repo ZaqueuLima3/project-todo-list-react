@@ -1,5 +1,6 @@
 import React from 'react';
 import { useDispatch } from 'react-redux';
+import PropTypes from 'prop-types';
 
 import { MdDone, MdClose } from 'react-icons/md';
 import {
@@ -38,3 +39,12 @@ export default function Card({ data, index }) {
     </Container>
   );
 }
+
+Card.propTypes = {
+  data: PropTypes.shape({
+    completed: PropTypes.bool,
+    content: PropTypes.string,
+    label: PropTypes.string,
+  }).isRequired,
+  index: PropTypes.number.isRequired,
+};

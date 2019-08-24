@@ -1,6 +1,8 @@
 import styled from 'styled-components';
 
-export const Container = styled.div`
+import PerfectScrollbar from '@opuscapita/react-perfect-scrollbar';
+
+export const Container = styled(PerfectScrollbar)`
   width: 100%;
   height: 100%;
   max-width: 900px;

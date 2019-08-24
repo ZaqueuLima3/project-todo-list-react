@@ -8,9 +8,8 @@ export function* newTask({ payload }) {
   const task = {
     id: getNewId(),
     ...data,
+    completed: false,
   };
-
-  console.log(task);
 
   yield put(addTaskSuccess(task));
 }

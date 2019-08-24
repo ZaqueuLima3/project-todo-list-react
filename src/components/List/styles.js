@@ -24,7 +24,7 @@ export const HeaderList = styled.header`
   button {
     width: 42px;
     height: 42px;
-    border-radius: 18px;
+    border-radius: 50%;
     background: #00d3de;
     border: 0;
   }

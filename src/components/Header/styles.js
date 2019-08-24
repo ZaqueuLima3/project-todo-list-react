@@ -5,12 +5,19 @@ export const Container = styled.div`
   height: 60px;
   background: #4d0187;
   display: flex;
+  align-items: center;
   justify-content: center;
+`;
+
+export const Content = styled.div`
+  width: 100%;
+  max-width: 1000px;
+  display: flex;
   align-items: center;
 
   div {
     width: 36px;
-    height: 36px;
+    height: 34px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -22,7 +29,7 @@ export const Container = styled.div`
   h4 {
     color: #fff;
     margin-left: 10px;
-    font-size: 26px;
+    font-size: 18px;
     font-weight: 500;
     font-style: italic;
   }

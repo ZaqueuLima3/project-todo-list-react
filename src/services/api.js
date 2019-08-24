@@ -1,6 +1,6 @@
-let id = 0;
 export function getNewId() {
-  return id++;
+  const id = Math.floor(Math.random() * 100000);
+  return id;
 }
 
 export function loadLists() {

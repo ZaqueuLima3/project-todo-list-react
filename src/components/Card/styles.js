@@ -27,15 +27,7 @@ export const Content = styled.div`
     background: #00d3de60;
     border: 2px solid #00d3de;
 
-    svg {
-      display: none;
-    }
 
-    &:hover {
-      svg {
-        display: block;
-      }
-    }
   }
 
   p {
